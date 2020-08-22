@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57c7bd4f-cdc5-4a88-b493-7528ccc14e82" name="Default Changelist" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/DataReader/ReadDataSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/DataReader/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/data_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/model/TextBert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/run_train_textBert.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextBert/train_TextBert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/DataReader/ReadDataSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/DataReader/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/guide.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/model/TextCNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/run_train_textCNN.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/statistics_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/text_padding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/train_textCNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextCNN/train_word2vec.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN/DataReader/ReadDataSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN/DataReader/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN/model/TextRNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN/run_train_textRNN.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN/train_textRNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN_Att/DataReader/ReadDataSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN_Att/DataReader/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN_Att/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN_Att/model/TextRNN_Att.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN_Att/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN_Att/run_train_textRNN_Att.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/TextRNN_Att/train_textRNN_Att.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/data_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/benchmarks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/contrib/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/contrib/run_camembert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/contrib/run_openai_gpt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/contrib/run_swag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/contrib/run_transfo_xl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/distiller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/grouped_batch_sampler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/lm_seqs_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/run_squad_w_distillation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/scripts/binarized_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/scripts/extract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/scripts/extract_distilbert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/scripts/token_counts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/training_configs/distilbert-base-cased.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/training_configs/distilbert-base-multilingual-cased.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/training_configs/distilbert-base-uncased.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/training_configs/distilgpt2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/training_configs/distilroberta-base.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/distillation/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/glue/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/glue/run_pl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/glue/run_pl_glue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/hans/hans_processors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/hans/test_hans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/hans/utils_hans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/mm-imdb/run_mmimdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/mm-imdb/utils_mmimdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/ner/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/ner/run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/ner/run_ner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/ner/run_pl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/ner/run_pl_ner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/ner/run_tf_ner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/ner/utils_ner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/pplm/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/pplm/imgs/headfigure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/pplm/imgs/wooly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/pplm/pplm_classification_head.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/pplm/run_pplm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/pplm/run_pplm_discrim_train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_bertology.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_generation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_glue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_language_modeling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_multiple_choice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_squad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_tf_glue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_tpu_glue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/run_xnli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/evaluate_cnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/finetune.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/run_train.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/run_train_tiny.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/test_bart_examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bart/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/configuration_bertabs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/convert_bertabs_original_pytorch_checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/modeling_bertabs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/run_summarization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/test_utils_summarization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/bertabs/utils_summarization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/t5/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/t5/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/t5/download_cnn_daily_mail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/t5/evaluate_cnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/summarization/t5/test_t5_examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/test_examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/tests_samples/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/tests_samples/MRPC/dev.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/tests_samples/MRPC/train.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/tests_samples/SQUAD/dev-v2.0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/tests_samples/SQUAD/train-v2.0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/transformer_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/translation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/translation/t5/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/translation/t5/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/translation/t5/evaluate_wmt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/translation/t5/test_t5_examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/examples/utils_multiple_choice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/predict_classification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/predict_classification.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/predicting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/train_glue_classification.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/activations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/benchmark_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/convert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/download.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/serving.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/commands/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_albert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_auto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_bart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_bert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_camembert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_ctrl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_distilbert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_electra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_flaubert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_gpt2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_mmbt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_openai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_t5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_transfo_xl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_xlm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_xlm_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/configuration_xlnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_albert_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_bart_original_pytorch_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_bert_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_bert_pytorch_checkpoint_to_original_tf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_dialogpt_original_pytorch_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_electra_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_gpt2_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_openai_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_pytorch_checkpoint_to_tf2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_roberta_original_pytorch_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_t5_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_transfo_xl_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_xlm_original_pytorch_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/convert_xlnet_original_tf_checkpoint_to_pytorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/metrics/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/metrics/squad_metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/processors/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/processors/glue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/processors/squad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/processors/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/data/processors/xnli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/file_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/hf_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/hf_argparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modelcard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_albert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_auto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_bart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_bert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_camembert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_ctrl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_distilbert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_electra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_encoder_decoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_flaubert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_gpt2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_mmbt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_openai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_t5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_albert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_auto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_bert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_camembert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_ctrl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_distilbert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_electra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_flaubert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_gpt2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_openai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_pytorch_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_t5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_transfo_xl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_transfo_xl_utilities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_xlm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_xlm_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_tf_xlnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_transfo_xl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_transfo_xl_utilities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_xlm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_xlm_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/modeling_xlnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/optimization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/optimization_tf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_albert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_auto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_bart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_bert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_bert_japanese.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_camembert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_ctrl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_distilbert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_electra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_flaubert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_gpt2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_openai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_t5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_transfo_xl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_xlm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_xlm_roberta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/tokenization_xlnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/training_args.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/transformers_local/utils_encoder_decoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/utils/download_glue_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytorch/huggingface_transformers_bert_classification/utils/link_tester.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/DataReader/ReadDataSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/DataReader/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/data_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/model/TextBert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/run_train_textBert.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextBert/train_TextBert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/DataReader/ReadDataSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/DataReader/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/guide.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/model/TextCNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/run_train_textCNN.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/statistics_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/text_padding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/train_textCNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/TextCNN/train_word2vec.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/classificationTask.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+        <option value="$PROJECT_DIR$/.idea/.gitignore" />
+        <option value="$PROJECT_DIR$/TextCNN/.idea/TextCNN.iml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bsgSqcnyLPx64xKbesfXzIM5WP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tensorflow" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tensorflow" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Sklearn_NB" />
+      <recent name="$PROJECT_DIR$/Sklearn_NB/code" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pytorch" />
+      <recent name="$PROJECT_DIR$/TextCNN" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57c7bd4f-cdc5-4a88-b493-7528ccc14e82" name="Default Changelist" comment="" />
+      <created>1589426217654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589426217654</updated>
+    </task>
+    <task id="LOCAL-00001" summary="update codes">
+      <created>1598087034351</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598087034351</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update codes again">
+      <created>1598087333323</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598087333323</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update codes files">
+      <created>1598087527855</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598087527855</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modify functions and finish the datareader">
+      <created>1598093500378</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598093500378</updated>
+    </task>
+    <task id="LOCAL-00005" summary="注释">
+      <created>1598093664607</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598093664607</updated>
+    </task>
+    <task id="LOCAL-00006" summary="重新提交">
+      <created>1598093873674</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598093873674</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first commit">
+      <created>1598095217866</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1598095217866</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update codes" />
+    <MESSAGE value="update codes again" />
+    <MESSAGE value="update codes files" />
+    <MESSAGE value="modify functions and finish the datareader" />
+    <MESSAGE value="注释" />
+    <MESSAGE value="重新提交" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="495" y="37" width="920" height="1030" key="CommitChangelistDialog2" timestamp="1598095217430">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="495" y="37" width="920" height="1030" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1598095217430" />
+    <state x="182" y="117" width="1536" height="872" key="DiffContextDialog" timestamp="1598094105426">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="182" y="117" width="1536" height="872" key="DiffContextDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1598094105426" />
+    <state width="229" height="234" key="Git.Branch.Popup" timestamp="1598095669316">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="229" height="234" key="Git.Branch.Popup/0.27.1920.1053@0.27.1920.1053" timestamp="1598095669316" />
+    <state x="441" y="187" key="SettingsEditor" timestamp="1598094227525">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="441" y="187" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1598094227525" />
+    <state x="555" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1598095618294">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1598095618294" />
+    <state x="196" y="225" width="1375" height="1030" key="dock-window-1" timestamp="1598083960167">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="196" y="225" width="1375" height="1030" key="dock-window-1/0.27.1920.1053@0.27.1920.1053" timestamp="1598083960167" />
+  </component>
+</project>
