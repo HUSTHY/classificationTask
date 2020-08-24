@@ -12,6 +12,7 @@ class TextBert(models.Model):
     def __init__(self,args,):
         super(TextBert,self).__init__()
         self.args = args
+        #由于没有下载到model.h5模型权重，这里得使用pytorch_model.bin格式文件加载from_pt = true
         self.bert = TFBertModel.from_pretrained(self.args.model_path, from_pt=True)
         # param.requires_grad = False 训练的时候不改变初始预训练bert的权重值
         self.cl1 = layers.Dense(768, activation='relu')
