@@ -13,20 +13,26 @@ class ReadDataSet():
         self.tokenizer = BertTokenizer.from_pretrained(args.model_path)
         self.file_path = args.data_file_path
         self.file_name = data_file_name
-        # self.generator = self.datagenerator()
+        self.tf_tensors_list = self.readfiles_tokening()
+        if 'train' in self.file_name:
+            self.len_train = len(self.tf_tensors_list)
+
+
+    def readfiles_tokening(self):
+        file_path = os.path.join(self.file_path, self.file_name)
+        tf_tensors_list = []
+        with open(file_path, 'r') as f:
+            lines = f.readlines()
+        for line in tqdm(lines, desc='read data tokening'):
+            line = line.strip().split('\t')
+            input_ids,input_mask,label = self.do_process_data((line[0], line[1]))
+            tf_tensors_list.append((input_ids,input_mask,label))
+        return tf_tensors_list
 
 
     def __call__(self, *args, **kwargs):
-        file_path = os.path.join(self.file_path, self.file_name)
-        data_list = []
-        with open(file_path, 'r') as f:
-            lines = f.readlines()
-        for line in tqdm(lines, desc='read data'):
-            line = line.strip().split('\t')
-            data_list.append((line[0], line[1]))
-
-        for ele in data_list:
-            yield self.do_process_data(ele)
+        for (input_ids,input_mask,label) in self.tf_tensors_list:
+            yield input_ids,input_mask,label
 
     def do_process_data(self, params):
         sentence = params[0]
