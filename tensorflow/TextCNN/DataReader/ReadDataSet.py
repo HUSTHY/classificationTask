@@ -37,16 +37,6 @@ class ReadDataSet(Dataset):
             output.append(res)
         return output
 
-    def __getitem__(self, item):
-        text = self.output[item][0]
-        label = self.output[item][1]
-        return text,label
-
-    def __len__(self):
-        if self.repeat == None:
-            data_len = 10000000
-        else:
-            data_len = len(self.output)
-        return data_len
-
-
+    def __call__(self, *args, **kwargs):
+        for features,labels in self.output:
+            yield features,labels
