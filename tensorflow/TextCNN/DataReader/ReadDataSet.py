@@ -1,11 +1,10 @@
-from torch.utils.data import Dataset
-import torch
+import tensorflow as tf
 from gensim.models import Word2Vec
 import pandas as pd
 from tqdm import tqdm
 import numpy as np
 
-class ReadDataSet(Dataset):
+class ReadDataSet():
     def __init__(self,file_path,repeat=1):
         self.max_sentence_length = 200
         self.repeat = repeat
@@ -14,6 +13,8 @@ class ReadDataSet(Dataset):
         self.wv_dim = 100
         self.data_list = self.read_file(file_path)
         self.output = self.word2vec_paddings_tensor(self.data_list)
+        if 'trian' in file_path:
+            self.len_train = len(self.data_list)
 
     def read_file(self,file_path):
         data_list = []
@@ -31,8 +32,8 @@ class ReadDataSet(Dataset):
             for word in data:
                 v = self.wv_model[word].tolist()
                 vec.append(v)
-            vec = torch.tensor(vec)
-            label = torch.tensor(int(label))
+            vec = tf.constant(vec)
+            label = tf.constant(int(label))
             res = (vec,label)
             output.append(res)
         return output

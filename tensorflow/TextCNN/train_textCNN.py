@@ -1,11 +1,10 @@
+from tensorflow.keras import metrics,optimizers,losses
+import tensorflow as tf
 from DataReader.ReadDataSet import ReadDataSet
-from torch.utils.data import DataLoader
-import torch
-from torch.optim.lr_scheduler import ReduceLROnPlateau,StepLR
-from tqdm import tqdm
-import torch.nn.functional as F
 from model.TextCNN import TextCNN
 from tensorboardX import SummaryWriter
+import argparse
+
 """
 采用的是200个词语
 loss可以下降的很快，但是验证集的准确率只能到65%
@@ -17,90 +16,118 @@ z注意训练过程中还是要监控验证集的准确率——这个比较好�
 """
 writer = SummaryWriter('runs/exp')
 
-def train(model,train_iter,dev_iter):
-    model.to('cuda')
-    #初始学习率
-    optimizer_params = {'lr': 1e-3, 'eps': 1e-8}
-    optimizer = torch.optim.Adam(model.parameters(),**optimizer_params)
-    scheduler = ReduceLROnPlateau(optimizer,mode='max',factor=0.8,min_lr=1e-5,patience=5,verbose=True,eps=1e-8)#mode max表示当监控量停止上升时，学习率将减小；min表示当监控量停止下降时，学习率将减小；这里监控的是loss因此应该用min
-    early_stop_step = 1000
-    epochs = 200
-    last_improve = 0 #记录上次提升的step
-    flag = False  # 记录是否很久没有效果提升
-    dev_best_loss = float('inf')
-    dev_best_acc = 0
-    correct = 0
-    total = 0
-    global_step = 0
-    for epoch in range(epochs):
-        for step,batch in tqdm(enumerate(train_iter),desc='Train iteration:'):
-            global_step += 1
-            optimizer.zero_grad()
-            batch = tuple(t.to('cuda') for t in batch)
-            input = batch[0]
-            label = batch[1]
-            model.train()
-            output = model(input)
-            loss = F.cross_entropy(output,label)
-            loss.backward()
-            optimizer.step()
+import os
 
-            total += label.size(0)
-            _,predict = torch.max(output,1)
-            correct += (predict==label).sum().item()
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-            train_acc = correct / total
-            if (step+1)%20 == 0:
-                print('Train Epoch[{}/{}],step[{}/{}],tra_acc{:.6f} %,loss:{:.6f}'.format(epoch,epochs,step,len(train_iter),train_acc*100,loss.item()))
-            if  (step)%(len(train_iter)/2)==0:
-                dev_acc,dev_loss = dev(model, dev_iter)
-                if dev_best_acc < dev_acc:
-                    dev_best_acc = dev_acc
-                    path = 'savedmodel/TextCNN_model.pkl'
-                    torch.save(model,path)
-                    last_improve = global_step
-                print("DEV Epoch[{}/{}],step[{}/{}],tra_acc{:.6f} %,dev_acc{:.6f} %,best_dev_acc{:.6f} %,train_loss:{:.6f},dev_loss:{:.6f}".format(epoch, epochs, step, len(train_loader), train_acc * 100, dev_acc * 100,dev_best_acc * 100, loss.item(),dev_loss.item()))
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    try:
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu,True)
+        logical_gpus = tf.config.experimental.list_physical_devices('GPU')
+        print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+    except RuntimeError as e:
+    # Memory growth must be set before GPUs have been initialized
+        print(e)
 
-            if global_step-last_improve >= early_stop_step:
-                print("No optimization for a long time, auto-stopping...")
-                flag = True
-                break
-            writer.add_scalar('train_loss', loss.item(), global_step=global_step)
-            writer.add_scalar('dev_loss', dev_loss.item(), global_step=global_step)
-            writer.add_scalar('train acc', train_acc, global_step=global_step)
-            writer.add_scalar('dev acc', dev_acc, global_step=global_step)
-        scheduler.step(dev_best_acc)
-        if flag:
-            break
-    writer.close()
 
-def dev(model, dev_iter):
-    model.eval()
-    loss_total = 0
-    with torch.no_grad():
-        correct = 0
-        total = 0
-        for step,batch in tqdm(enumerate(dev_iter),desc='dev iteration:'):
-            batch = tuple(t.to('cuda') for t in batch)
-            input = batch[0]
-            label = batch[1]
-            output = model(input)
-            loss = F.cross_entropy(output, label)
-            loss_total += loss
-            total += label.size(0)
-            _, predict = torch.max(output, 1)
-            correct += (predict == label).sum().item()
-        res = correct/total
-        return res,loss_total/len(dev_iter)
+def printbar():
+    today = tf.timestamp()%(24*60*60)
+
+    hour = tf.cast(today // 3600 + 8, tf.int32) % tf.constant(24)
+    minite = tf.cast((today % 3600) // 60, tf.int32)
+    second = tf.cast(tf.floor(today % 60), tf.int32)
+    def timeformat(m):
+        if tf.strings.length(tf.strings.format("{}", m))==1:
+            return (tf.strings.format("0{}", m))
+        else:
+            return (tf.strings.format("{}", m))
+
+    timestrins = tf.strings.join([timeformat(hour), timeformat(minite),
+                                  timeformat(second)], separator=":")
+    tf.print('====' * 20 + timestrins)
+
+
+
+@tf.function
+def train_model(model,train_data,train_len,dev_data,args):
+    optimizer = optimizers.Adam(learning_rate=args.lr)
+
+    train_loss = metrics.Mean(name='train_loss')
+    train_accuracy = metrics.SparseCategoricalAccuracy(name = 'train_accuracy')
+
+    valid_loss = metrics.Mean(name = 'valid_loss')
+    valid_accuracy = metrics.SparseCategoricalAccuracy(name = 'valid_accuracy')
+
+    loss_fun = losses.SparseCategoricalCrossentropy()
+    step = 0
+    for epoch in tf.range(args.epochs):
+        for features,lables in train_data:
+            train_step(model, features, lables, optimizer, train_loss, train_accuracy, loss_fun)
+            step += 1
+            # print('step',step)
+            if step % 100 == 0 and step % ((int(train_len / args.batch_size / 2 / 100)) * 100) != 0:
+                logs = 'Epoch={},step={},Loss:{},Accuracy:{},Valid Loss:{},Valid Accuracy:{},best_valid_acc:{}'
+                tf.print(tf.strings.format(logs, (
+                    epoch, step, train_loss.result(), train_accuracy.result(), valid_loss.result(), valid_accuracy.result(),
+                    best_valid_acc)))
+
+            if step % ((int(train_len / args.batch_size / 2 / 100)) * 100) == 0:
+                for features, lables in dev_data:
+                    valid_step(model, features, lables, optimizer, valid_loss, valid_accuracy, loss_fun)
+                if valid_accuracy.result() >= best_valid_acc:
+                    best_valid_acc = valid_accuracy.result()
+                    save_path = args.model_save_path
+                    # model.save(save_path,save_format='h5')
+                    # model.save(save_path, save_format='tf')
+                    model.save_weights(save_path, save_format='tf')
+                logs = 'Epoch={},step={},Loss:{},Accuracy:{},Valid Loss:{},Valid Accuracy:{},best_valid_acc:{}'
+                printbar()
+                tf.print(tf.strings.format(logs, (
+                    epoch, step, train_loss.result(), train_accuracy.result(), valid_loss.result(), valid_accuracy.result(),
+                    best_valid_acc)))
+                tf.print("")
+
+        train_loss.reset_states()
+        train_accuracy.reset_states()
+        valid_loss.reset_states()
+        valid_accuracy.reset_states()
+
+
+@tf.function
+def train_step(model, features, lables, optimizer, train_loss, train_accuracy, loss_fun):
+    with tf.GradientTape() as tape:
+        predicts = model(features)
+        loss = loss_fun(lables,predicts)
+    gradients = tape.gradient(loss,model.trainable_variables)
+    optimizer.apply_gradients(zip(gradients,model.trainable_variables))
+    train_loss.update_state(loss)
+    train_accuracy.update_state(lables,predicts)
+
+
+def valid_step(model, features, lables, optimizer, valid_loss, valid_accuracy, loss_fun):
+    predicts = model(features)
+    loss = loss_fun(lables,predicts)
+
+    valid_loss.update_state(loss)
+    valid_accuracy.update_state(lables,predicts)
+
 
 
 if __name__ == '__main__':
-    batch_size = 2000
-    train_data = ReadDataSet('data/train_padding.csv')
-    train_loader = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True)
+    parser = argparse.ArgumentParser(description='init params configuration')
+    parser.add_argument('--batch_size', type=int, default=100)
+    args = parser.parse_args()
+    print(args)
+    train_generator = ReadDataSet('data/train_padding.csv')
+    train_len = train_generator.len_train
+    train_data = tf.data.Dataset.from_generator(train_generator,(tf.float32,tf.int32)).shuffle(buffer_size=2000).batch(batch_size=args.batch_size).prefetch(buffer_size = tf.data.experimental.AUTOTUNE)
 
-    dev_data = ReadDataSet('data/dev_padding.csv')
-    dev_loader = DataLoader(dataset=dev_data, batch_size=batch_size, shuffle=True)
+    dev_generator = ReadDataSet('data/dev_padding.csv')
+    dev_data = tf.data.Dataset.from_generator(dev_generator, (tf.float32, tf.int32)).shuffle(
+        buffer_size=2000).batch(batch_size=args.batch_size).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+
     model = TextCNN()
 
-    train(model,train_loader,dev_loader)
+    train_model(model,train_data,train_len,dev_data,args)

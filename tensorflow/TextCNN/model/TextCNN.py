@@ -12,10 +12,10 @@ class TextCNN(models.Model):
         ci = 1
         kernel_num = 25
 
-        self.conv1 = layers.Conv2D()
-        self.conv2 = layers.Conv2D()
-        self.conv3 = layers.Conv2D()
-        self.conv4 = layers.Conv2D()
+        self.conv1 = layers.Conv2D(kernel_num,(3,embedding_dim))
+        self.conv2 = layers.Conv2D(kernel_num,(5,embedding_dim))
+        self.conv3 = layers.Conv2D(kernel_num,(7,embedding_dim))
+        self.conv4 = layers.Conv2D(kernel_num,(9,embedding_dim))
 
         self.dropout = layers.Dropout(0.8)
         self.classificer = layers.Dense(class_num,activation='softmax')
